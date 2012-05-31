@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChattrBox</title>
+
+  <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+
+  <link href="/static/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .container-fluid > div > div, .container > div > div {
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+
+      padding: 10px;
+    }
+  </style>
+  <link href="/static/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+  <script src="/static/bootstrap/docs/assets/js/bootstrap-button.js"></script>
+
+  {% block js %}{% endblock %}
+  {% block css %}{% endblock %}
+</head>
+
+<body>
+  {% block container %}
+  {% endblock %}
+</body>
+
+</html>

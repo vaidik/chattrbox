@@ -1,0 +1,88 @@
+{% extends "2_column_structure.html" %}
+
+{% block js %}
+<script type="text/javascript">
+  var channel_name = "{{ uri }}";
+  var uri = "{{ uri }}";
+  var nick = "{{ nick }}";
+  var send_message_url = "{{ send_message_url }}";
+  var rename_url = "{{ rename_url }}";
+</script>
+<script src="/static/js/pusher.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/js/chat.js"></script>
+{% endblock %}
+
+{% block css %}
+<link href="/static/css/chat.css" rel="stylesheet">
+{% endblock %}
+
+{% block sidebar %}
+  <div class="well" style="overflow-y: scroll;">
+    <div id="participants">
+      {% for user in connected %}
+        <div class="participant" user-nick="{{ user }}">{{ user }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block body %}
+  <div id="chat_application">
+    <div id="messages" class="well" style="overflow-y: scroll; height: 200px;">
+    </div>
+
+    <form id="chatbox" class="well form-inline">
+      <input style="width: 60%" name="msg" placeholder="Enter your message here..." autofocus>
+      <input type="button" value="Send" class="btn disabled">
+    </form>
+  </div>
+
+  <!-- Modal Window for Leaving the chat session -->
+  <div id="myModal" class="hide fade modal">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h3>Sure you want to leave?</h3>
+    </div>
+    <div class="modal-body">
+      <p>Do you really want to leave this chat session?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal">No</a>
+      <a href="#" class="btn btn-danger">Leave</a>
+    </div>
+  </div>
+
+  <!-- Modal Window for renaming the Nickname -->
+  <div id="myNickRename" class="hide fade modal">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h3>Change your Nickname?</h3>
+    </div>
+    <div class="modal-body">
+      <p>Changing your nickname will inform everyone in the session that you have changed your nickname.</p>
+
+      <form action="" method="post">
+        <input placeholder="Enter your new nickname" value="{{ nick }}" name="new_nick">
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn btn-success">Rename</a>
+      <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+    </div>
+  </div>
+
+  <!-- Modal Window for Pusher Statuses -->
+  <div id="pusher_status_modal" class="hide fade modal">
+    <div class="modal-header">
+      <button class="close" onclick="modalHide()">×</button>
+      <h3></h3>
+    </div>
+    <div class="modal-body">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn btn-danger" onclick="modalHide()">Close</a>
+    </div>
+  </div>
+{% endblock %}

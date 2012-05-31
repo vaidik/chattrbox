@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block css %}
+
+  <link href="/static/css/credits.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block container %}
+  <div class="container">
+    <div class="row">
+      <h1 class="span6 offset3" align="center">ChattrBox</h1>
+    </div>
+
+    <div class="row">
+      <div class="span6 offset3 well">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div class="row">
+      {% include 'credits.html' %}
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+.c_link {
+  display: block;
+}
+
+#credits-modal a[data-credit=html5] {
+  width: 250px;
+  height: 61px;
+  background: url("/static/img/html5-gray.png") no-repeat;
+}
+
+#credits-modal a:hover[data-credit=html5] {
+  background: url("/static/img/html5.png") no-repeat;
+}
+
+#credits-modal a[data-credit=apache] {
+  width: 250px;
+  height: 190px;
+  background: url("/static/img/apache-gray.jpg") no-repeat;
+}
+
+#credits-modal a:hover[data-credit=apache] {
+  background: url("/static/img/apache.jpg") no-repeat;
+}
+
+#credits-modal a[data-credit=redis] {
+  width: 250px;
+  height: 83px;
+  background: url("/static/img/redis-gray.png") no-repeat;
+}
+
+#credits-modal a:hover[data-credit=redis] {
+  background: url("/static/img/redis.png") no-repeat;
+}
+
+#credits-modal a[data-credit=flask] {
+  width: 250px;
+  height: 190px;
+  background: url("/static/img/flask.jpg") no-repeat;
+}

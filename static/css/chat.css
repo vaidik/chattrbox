@@ -1,0 +1,19 @@
+.row-fluid > .span12 > div div {
+  float: right;
+}
+
+.alert-none {
+  background: 0;
+  border: 0;
+  color: #333333;
+  padding-left: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.time {
+  padding-left: 0;
+  padding-right: 16px;
+  border: 0;
+  background: 0;
+}

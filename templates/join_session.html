@@ -1,0 +1,21 @@
+{% extends "1_column_structure.html" %}
+
+{% block body %}
+<div>
+  <h2 align="center">Join this session</h2>
+
+  <hr>
+
+  <p align="center">Choose a nickname and you are good to go!</p>
+
+  <hr>
+
+  <form action="{{ join_session_url }}" method="post">
+    <center>
+      <input type="text" placeholder="Nickname" name="nick" style="padding: 6px; font-size: 16px;" autofocus>
+      <br>
+      <input type="submit" value="Join Session" class="btn btn-primary btn-large">
+    </center>
+  </form>
+</div>
+{% endblock %}

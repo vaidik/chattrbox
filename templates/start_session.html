@@ -1,0 +1,26 @@
+{% extends "1_column_structure.html" %}
+
+{% block body %}
+<div>
+  <h2 align="center">Start a new session</h2>
+
+  <hr>
+
+  <p>Follow these easy steps to start chatting with just about anyone:</p>
+
+  <ol>
+    <li>Enter a nickname and click "Start a new session" to start a new chat session.</li>
+    <li>Copy the unique URL for your chat session and send it to whoever you want to chat with.</li>
+  </ol>
+
+  <hr>
+
+  <form action="" method="post">
+    <center>
+      <input type="textbox" name="nick" placeholder="Enter your nickname" autofocus style="margin-bottom: 16px;">
+      <br>
+      <input type="submit" value="Start a new session" class="btn btn-primary btn-large">
+    </center>
+  </form>
+</div>
+{% endblock %}
