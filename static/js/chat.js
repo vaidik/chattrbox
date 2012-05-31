@@ -118,7 +118,7 @@ channel.bind('pusher:member_added', function(member) {
 // When another member leaves the channel
 channel.bind('pusher:member_removed', function(member) {
   $.ajax({
-    url: 'http://localhost:5000/' + uri + '/check_session',
+    url: '/' + uri + '/check_session',
     type: 'GET',
   }).done(function(data) {
     if (data == 'error') {
@@ -265,7 +265,7 @@ function sendMessage(message) {
     receiveMessage({user: nick, msg: message});
 
     $.ajax({
-      url: 'http://localhost:5000' + send_message_url,
+      url: send_message_url,
       type: 'POST',
       data: {msg: message},
     }).done(function() {
