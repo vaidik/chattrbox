@@ -339,7 +339,7 @@ $(document).ready(function() {
     'trigger': 'manual',
     animation: true,
     title: "Chat Session URL",
-    content: "Copy this URL and share it with anyone to start chatting.<hr><input type='text' id='copyURL_field' value='http://localhost:5000/" + uri + "'>",
+    content: "Copy this URL and share it with anyone to start chatting.<hr><input type='text' id='copyURL_field' value='http://106.187.94.45/" + uri + "'>",
   });
 
   $('#copyURL').bind('click', function() {
@@ -397,7 +397,7 @@ $(document).ready(function() {
     title: "Leave this session.",
   });
 
-  $('#download_chat').bind('click', function() {
+  $('#download_chat, #download_chat_leave').bind('click', function() {
     var tmp = document.createElement("DIV");
     tmp.innerHTML = $('#messages').html();
     var chat_data = '';

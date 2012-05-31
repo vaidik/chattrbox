@@ -44,10 +44,11 @@
       <h3>Sure you want to leave?</h3>
     </div>
     <div class="modal-body">
-      <p>Do you really want to leave this chat session?</p>
+      <p>Do you really want to leave this chat session? You might want to save your chat transcript before you leave.</p>
     </div>
     <div class="modal-footer">
       <a href="#" class="btn" data-dismiss="modal">No</a>
+      <a href="#" class="btn btn-primary"><i class="icon-download icon_white"></i> Download Chat</a>
       <a href="#" class="btn btn-danger">Leave</a>
     </div>
   </div>
@@ -75,14 +76,14 @@
   <!-- Modal Window for Pusher Statuses -->
   <div id="pusher_status_modal" class="hide fade modal">
     <div class="modal-header">
-      <button class="close" onclick="modalHide()">×</button>
+      <button class="close" data-dismiss="modal">×</button>
       <h3></h3>
     </div>
     <div class="modal-body">
       <p></p>
     </div>
     <div class="modal-footer">
-      <a href="#" class="btn btn-danger" onclick="modalHide()">Close</a>
+      <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
     </div>
   </div>
 {% endblock %}
